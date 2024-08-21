@@ -39,12 +39,12 @@ Ensure MongoDB is installed and running. If not, you can download it from MongoD
 Download PhoBERT Model
 Download the pre-trained PhoBERT model from Hugging Face:
 
-bash
-Sao chép mã
+```bash
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 model = AutoModelForSequenceClassification.from_pretrained("vinai/phobert-base")
 tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base")
+```
 Running the System
 Load the Model and Tokenizer:
 
@@ -54,9 +54,9 @@ Connect to MongoDB:
 Ensure that the MongoDB service is running and the necessary news articles are stored in the database.
 Run the Prediction Script:
 
-bash
-Sao chép mã
+```bash
 python predict.py
+```
 This script will load the news articles from MongoDB, process them using the PhoBERT model, and output the number of fake and real news articles along with the detailed text of fake articles.
 
 Usage
@@ -73,8 +73,7 @@ Data
 The dataset used in this project is a Vietnamese fake news dataset (vn_news_226_tlfr.csv). It contains labeled articles that have been preprocessed and augmented for better model training.
 
 Folder Structure
-graphql
-Sao chép mã
+```graphql
 fake_news_detection/
 │
 ├── Data/                              # Contains the dataset and other data files
@@ -90,6 +89,7 @@ fake_news_detection/
 ├── requirements.txt                   # Python packages required
 ├── README.md                          # Project documentation
 └── .gitignore                         # Git ignore file
+```
 Contributing
 Feel free to contribute to this project by submitting a pull request. Ensure your code follows the existing style and conventions.
 
@@ -100,8 +100,6 @@ Acknowledgements
 PhoBERT by VinAI Research
 Transformers by Hugging Face
 MongoDB
-markdown
-Sao chép mã
 
 ### Key Sections:
 - **Overview**: Describes what the project does.
